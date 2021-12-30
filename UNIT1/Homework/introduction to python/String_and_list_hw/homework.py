@@ -1,4 +1,5 @@
-evens  = [x for x in range(0,299,2)]
+evens  = [x for x in range(1,299,2)]
+print(len(evens))
 for x in evens:
-    print(len(evens),x,x**2)
+    print(x,x**2)
 print(57 in evens)

@@ -6,8 +6,8 @@ def isPalindrome(phrase):
 
 # qs2 Prime check
 def isPrime(num):
-    if num == 1:
-        return True
+    if num == 0 or num == 1:
+        return False
     else:
         for i in range(2,num):
             if num%i==0:
@@ -42,12 +42,19 @@ def reverseString(string):
 
 #qs6 sum of a list (we can use the sum(iterable) function)
 def sumOfList(list):
-    return sum(list)
+    summ = 0
+    for item in list:
+        summ += item
+    return summ
 
 '''print(sumOfList(int(input("give the number {} element for the list : ".format(i+1))) for i in range(int(input("give the len of the list : ")))))''' 
 
 #qs7 max of 3 numbers (we will use a list of 3 and find its max)  
 def maxOfThree(listOfNum):
-    return max(listOfNum)
+    max  = listOfNum[0]
+    for item in listOfNum:
+        if item > max:
+            max = item
+    return max
 
 print(maxOfThree(int(input("give the {} number :".format(i+1))) for i in range(3)))
